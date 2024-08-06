@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>七夕贺卡</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fdbcc8;
+      overflow: hidden;
+    }
+    .valentines-day { position: relative; cursor: pointer; }
+    .envelope { position: relative; filter: drop-shadow(0 0 25px rgba(0,0,0,.1)); }
+    .envelope:before {
+      content: '';
+      position: absolute;
+      left: -37px;
+      top: -82px;
+      width: 254px;
+      height: 254px;
+      background-color: #ff9494;
+      transform: rotate(-45deg);
+      border-radius: 0 15px 0 0;
+    }
+    .envelope:after {
+      content: '';
+      position: absolute;
+      left: -90px;
+      top: 45px;
+      width: 360px;
+      height: 225px;
+      background-color: #ff9494;
+    }
+    .heart {
+      position: relative;
+      top: 50px;
+      left: 0;
+      display: inline-block;
+      width: 180px;
+      height: 180px;
+      transform: rotate(-45deg);
+      background-color: #e01911;
+      transition: .5s;
+      filter: drop-shadow(0 -10px 25px rgba(0,0,0,.3));
+    }
+    .heart:before,
+    .heart:after {
+      content: '';
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background-color: #e01911;
+      border-radius: 50%;
+    }
+    .heart:before { top: -100px; left: 0; }
+    .heart:after { left: 100px; top: 0; }
+    .front {
+      position: absolute;
+      top: 44px;
+      left: 80px;
+      z-index: 4;
+      width: 0;
+      height: 0;
+      border-right: 190px solid #fbd2d2;
+      border-top: 113px solid transparent;
+      border-bottom: 113px solid transparent;
+    }
+    .front:before {
+      content: '';
+      position: absolute;
+      top: -113px;
+      left: -170px;
+      width: 0;
+      height: 0;
+      border-left: 190px solid #fbd2d2;
+      border-top: 113px solid transparent;
+      border-bottom: 113px solid transparent;
+    }
+    .front:after {
+      content: '';
+      position: absolute;
+      top: -36px;
+      left: -170px;
+      width: 0;
+      height: 0;
+      border-bottom: 150px solid #fce7e9;
+      border-right: 180px solid transparent;
+      border-left: 180px solid transparent;
+    }
+    .text {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      z-index: 2;
+      width: 200px;
+      font-size: 18px;
+      color: #fff;
+      text-align: center;
+      letter-spacing: 5px;
+      transition: .5s;
+    }
+    .text h4 { margin: 0; }
+    .text p {
+      position: absolute;
+      top: 70px;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+    .valentines-day:hover .heart {
+      transform: translateY(-50px) rotate(-45deg);
+    }
+    .valentines-day:hover .text {
+      transform: translateY(-50px);
+    }
+  </style>
+</head>
+<body>
+  <div class="valentines-day">
+    <div class="envelope"></div>
+    <div class="heart"></div>
+    <div class="text">
+      <h4>七夕节快乐！！！</h4>
+      <p>to Jenny</p>
+    </div>
+    <div class="front"></div>
+  </div>
+</body>
+</html>
